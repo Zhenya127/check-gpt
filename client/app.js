@@ -1,5 +1,5 @@
-const urlMessage = 'https://prorokky-check-gpt-a9a2.twc1.net/generate-reply/';
-const urlReview = 'https://prorokky-check-gpt-a9a2.twc1.net/review/'
+const urlMessage = 'https://zhenya127-check-gpt-39f8.twc1.net/generate-reply/';
+const urlReview = 'https://zhenya127-check-gpt-39f8.twc1.net/review/'
 
 const node = document.getElementById('result')
 const review = document.getElementById('review')
