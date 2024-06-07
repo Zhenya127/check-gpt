@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1c1c1c;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app__container {
+    background-color: #ffb58a57;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app__info {
+    text-align: center;
+    width: 100%;
+}
+
+.app__main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.app__textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1c1c1c;
+}
+
+.app_select {
+    width: 150px;
+    color: #1c1c1c;
+}
+
+textarea {
+    margin-right: 14px;
+}
+
+.app__result {
+    margin-top: 14px;
+    width: 100%;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+
+.app__result th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+
+.app__result td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+
+.app__review__hidden {
+    visibility: hidden;
+}
+
+.app__review__visible {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.app__reviewButton {
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: none;
+    padding: 4px;
+    width: auto;
+    cursor: pointer;
+    color: #1c1c1c;
+    max-width: auto;
+    text-align: center;
+}
+
+.app_buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    color: #1c1c1c;
+    text-align: center;
+}
+
+.app__checkText {
+    margin-top: 14px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: none;
+    padding: 4px;
+    width: auto;
+    cursor: pointer;
+    color: #1c1c1c;
+    max-width: auto;
+    text-align: center;
+}
+
+.app__generatePDF {
+    margin-top: 14px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    padding: 4px;
+    border: none;
+    width: auto;
+    max-width: auto;
+    cursor: pointer;
+    color: #1c1c1c;
+    text-align: center;
+}

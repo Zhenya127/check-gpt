@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet" />
+        <title>Проверка текста</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js" integrity="sha512-2/YdOMV+YNpanLCF5MdQwaoFRVbTmrJ4u4EpqS/USXAQNUDgI5uwYi6J98WVtJKcfe1AbgerygzDFToxAlOGEQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.2/mammoth.browser.min.js" integrity="sha512-4covLYRBEok64+Bs3tpg8HTAfM+aUP/ATgSFI4WdPALtfrCteOIRlCd+vgpKdpCuWtmmHezdXaeUw4j8KIHtxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./Roboto-Regular-normal.js"></script>
+    </head>
+    <body>
+        <div class='app__container'>
+            <div class='app__info'>
+                <h3>Система определения текста написанного с помощью ИИ</h3>
+                <p>Загрузите файл или просто скопируйте текст и узнайте
+                    использовался ли ИИ при написании Вашего текста</p>
+            </div>
+            <div class='app__main'>
+                <div class='app__textarea'>
+                    <input accept=".docx, .pdf, .txt" type="file" onchange='readFile(this)'>
+                    <textarea id='textarea'></textarea>
+                    <select class='app_select' id='selectModel' size="1">
+                        <option value="modelX" selected="selected">model X</option>
+                        <option value="modelY">model Y</option>
+                    </select>
+                </div>
+                <div class='app_buttons'>
+                    <button
+                        id='checkButton'
+                        class='app__checkText'
+                        onclick="readTextarea()">
+                        Проверить
+                    </button>
+                    <button
+                        id='generatePDFButton'
+                        class='app__generatePDF'
+                        onclick="generatePDF()">
+                        Скачать отчет
+                    </button>
+                </div>
+            </div>
+            <table class='app__result' id='result'></table>
+            <div class='app__review__hidden' id='review'>
+                <textarea id='textareaReview' placeholder='Напишите ваши впечатления'></textarea>
+                <button
+                    class='app__reviewButton'
+                    id='review'
+                    onclick="sendReview()">
+                        Отправить отзыв
+                </button>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
